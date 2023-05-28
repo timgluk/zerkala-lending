@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel, series } = require("gulp");
+const { src, dest, watch, parallel, series, gulp } = require("gulp");
 
 const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
@@ -7,6 +7,7 @@ const uglify = require("gulp-uglify-es").default;
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
+const ghPages = require('gh-pages');
 
 function browsersync() {
   browserSync.init({
@@ -32,11 +33,11 @@ function images() {
         }),
       ])
     )
-    .pipe(dest("dist/images"));
+    .pipe(dest("dist/assets/images"));
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src(["app/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -79,6 +80,16 @@ function watching() {
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/*.html"]).on("change", browserSync.reload);
 }
+
+function deploy() {
+  return ghPages.publish('dist', {
+    branch: 'gh-pages',
+    repo: 'https://github.com/timur-webdev/zerkala-lending.git',
+    dotfiles: true
+  });
+}
+
+exports.deploy = deploy;
 
 exports.styles = styles;
 exports.watching = watching;

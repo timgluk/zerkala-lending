@@ -22,7 +22,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src('app/images/**/*')
+  return src('app/assets/images/**/*')
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -84,7 +84,7 @@ function watching() {
 function deploy() {
   return ghPages.publish('dist', {
     branch: 'gh-pages',
-    repo: 'https://github.com/timur-webdev/zerkala-lending.git',
+    repo: 'https://github.com/tgluk/zerkala-lending.git',
     dotfiles: true
   });
 }

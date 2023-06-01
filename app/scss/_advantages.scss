@@ -19,6 +19,7 @@
       gap: 20px;
     }
     @media (max-width: 440px) {
+      margin: 50px 15px 0 15px;
       gap: 15px;
     }
     .advantage {
@@ -30,6 +31,9 @@
       @media (max-width: 670px) {
         width: 200px;
       }
+      @media (max-width: 420px) {
+        width: 170px;
+      }
       .background {
         display: grid;
         grid-template-rows: 125px 1fr;
@@ -40,16 +44,21 @@
         background: linear-gradient(180deg, #7376C7 0%, #6A70FF 100%);
         box-shadow: inset 0px 0px 21px 13px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
+        justify-items: center;
+        // align-items: center;
         @media (max-width: 440px) {
           grid-template-rows: 1fr 1fr;
           height: 150px;
         }
-        &__img {
+        &__img { 
           position: absolute;
-          bottom: 0;
           top: 0;
+          right: 0;
+          left: 0;
           height: 120px;
+          margin: auto;
           object-fit: contain;
+          justify-self: center;
           @media (max-width: 440px) {
             width: 90px;
           }
@@ -64,6 +73,9 @@
           @media (max-width: 670px) {
             font-size: 20px;
           }
+          @media (max-width: 420px) {
+            font-size: 18px;
+          }
         }
         &__subtitle {
           font-weight: 400;
@@ -74,6 +86,10 @@
           margin: 0;
           @media (max-width: 670px) {
             font-size: 16px;
+          }
+          @media (max-width: 420px) {
+            font-size: 14px;
+            line-height: 1;
           }
         }
       }

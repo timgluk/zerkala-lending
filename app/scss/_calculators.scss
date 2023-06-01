@@ -163,9 +163,9 @@
   }
   .description {
     font-family: 'Lato', sans-serif;
-    // @media (max-width: 1200px) {
-    //   grid-column: 2 / 3;
-    // }
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
     &__title {
       font-weight: 700;
       font-size: 24px;

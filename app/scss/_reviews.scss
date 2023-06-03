@@ -20,9 +20,15 @@
       }
     }
     .review-box {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      column-gap: 10px;
+      @media (max-width: 850px) {
+        grid-template: 1fr 1fr / 1fr 1fr;
+        gap: 10px 10px;
+      }
+   
       .review {
         display: flex;
         flex-direction: column;
@@ -31,17 +37,26 @@
         border-radius: 10px;
         max-width: 256px;
         padding: 20px;
+        @media (max-width: 1200px) {
+          padding: 10px;
+        }
         &__header {
           display: flex;
           flex-direction: row;
           gap: 20px;
+          @media (max-width: 1200px) {
+            gap: 10px;
+          }
           .photo {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 75px;
+            @media (max-width: 1200px) {
+              width: 65px;
+            }
             &__img {
-              // width: 100%;
+              width: 100%;
             }
           }
           .person {
@@ -53,18 +68,27 @@
               font-weight: 600;
               font-size: 15px;
               color: #535699;
+              @media (max-width: 1200px) {
+                font-size: 12px;
+              }
             }
             &__date {
               font-family: 'Montserrat';
               font-weight: 400;
               font-size: 15px;
               color: #535699;
+              @media (max-width: 1200px) {
+                font-size: 12px;
+              }
             }
             &__grade {
               display: flex;
               flex-direction: row;
               .grade__img {
                 width: 25px;
+                @media (max-width: 1200px) {
+                  width: 15px;
+                }
               }
             }
           }
@@ -76,6 +100,23 @@
           line-height: 84.5%;
           color: rgba(83, 86, 153, 0.7);
         }
+      }
+    }
+    .reviews__button {
+      padding: 10px 25px;
+      margin-top: 20px;
+      width: max-content;
+      border: none;
+      background: linear-gradient(180deg, #535699 -37.8%, #2D32A4 150%);
+      border-radius: 10px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 30px;
+      color: #FFFFFF;
+      @media (max-width: 650px) {
+        padding: 10px 10px;
+        font-size: 15px;
       }
     }
   }

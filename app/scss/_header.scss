@@ -61,12 +61,14 @@
         flex-direction: column;
         justify-content: space-around;
         &__tel {
+          text-decoration: none;
           text-align: right;
           font-weight: 600;
           font-size: 30px;
           line-height: 36px;
           margin: 0;
           white-space: nowrap;
+          color: #000;
           @media (max-width: 1280px) {
             font-size: 26px;
           }

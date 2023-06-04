@@ -90,37 +90,37 @@
               <div class="dimensions">
                 <div class="input-wrap">
                   <p class="input-wrap__description">Длина в метрах</p>
-                  <input class="input-wrap__input" type="number">
+                  <input class="input-wrap__input" type="number" id="length" min="0">
                 </div>
                 <div class="input-wrap">
                   <p class="input-wrap__description">Ширина в метрах</p>
-                  <input class="input-wrap__input" type="number">
+                  <input class="input-wrap__input" type="number" id="width" min="0">
                 </div>
               </div>
               <div class="container-square">
                 <img src="./assets/images/icons/next.png" alt="далее" class="container-square__img">
                 <div class="square-input-box">
                   <p class="square-input-box__text">м²</p>
-                  <input class="square-input-box__input" type="nuber">
+                  <input class="square-input-box__input" type="number" id="square" min="0">
                 </div>
                 <img src="./assets/images/icons/next.png" alt="далее" class="container-square__img">
               </div>
               <div class="sum">
                 <div class="out-wrap">
                   <p class="out-wrap__text">Цена за квадрат</p>
-                  <input class="out-wrap__input-price-square" type="number" >
+                  <div class="out-wrap__input-price-square">454,25 ₽</div>
                 </div>
                 <div class="out-wrap">
                   <p class="out-wrap__text">Сумма</p>
-                  <span class="out-wrap__total">220₽</span>
+                  <div class="out-wrap__total">0 ₽</div>
                 </div>
               </div>
             </div>
             <div class="price">
-              <p class="price__text">Цена с комплектующими:</p><span class="price__sum">220₽</span>
+              <p class="price__text">Цена с комплектующими:</p><span class="price__sum" id="parts-sum">0 ₽</span>
             </div>
             <div class="price">
-              <p class="price__text">Цена с монтажем:</p><span class="price__sum">1.220₽</span>
+              <p class="price__text">Цена с монтажем:</p><span class="price__sum" id="montage">1.220₽</span>
             </div>
           </div>
           <div class="buttons">
@@ -167,6 +167,24 @@
     <section class="questions">
       <div class="wrapper">
         <h2 class="title">Ответы на вопросы</h2>
+        <div class="drop-down-box">
+          <div class="question">
+            <p class="question__title">Как быстро работает доставка ?</p>
+            <img src="./assets/images/icons/strelka.png" alt="Стрелка" class="question__arrow">
+          </div>
+          <div class="answer">
+            <p class="answer__text">На следующий день после оформления заказа.</p>
+          </div>
+        </div>
+        <div class="drop-down-box">
+          <div class="question">
+            <p class="question__title">Как быстро работает доставка ?</p>
+            <img src="./assets/images/icons/strelka.png" alt="Стрелка" class="question__arrow">
+          </div>
+          <div class="answer">
+            <p class="answer__text">На следующий день после оформления заказа.</p>
+          </div>
+        </div>
         <div class="drop-down-box">
           <div class="question">
             <p class="question__title">Как быстро работает доставка ?</p>

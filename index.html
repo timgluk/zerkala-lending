@@ -22,9 +22,9 @@
           <p class="logo__slogan">Официальный дилер подвесных систем</p>
         </div>
         <ul class="list">
-          <li class="list__item">Работаем с 2018 года</li>
+          <li class="list__item">Работаем более 5 лет</li>
           <li class="list__item">Возможно оплата при получении</li>
-          <li class="list__item">Профессиональный метраж</li>
+          <li class="list__item">Профессиональный монтаж</li>
           <li class="list__item">Скидки на объём</li>
           <li class="list__item">Быстрый расчёт</li>
         </ul>
@@ -87,23 +87,26 @@
         <div class="calculation">
           <div class="calculation-box">
             <div class="inputs">
-              <div class="dimensions">
-                <div class="input-wrap">
-                  <p class="input-wrap__description">Длина в метрах</p>
-                  <input class="input-wrap__input" type="number" id="length" min="0">
+              <div class="inputs-box">
+                <div class="dimensions">
+                  <div class="input-wrap">
+                    <p class="input-wrap__description">Длина в метрах</p>
+                    <input class="input-wrap__input" type="number" id="length" min="0">
+                  </div>
+                  <div class="input-wrap">
+                    <p class="input-wrap__description">Ширина в метрах</p>
+                    <input class="input-wrap__input" type="number" id="width" min="0">
+                  </div>
                 </div>
-                <div class="input-wrap">
-                  <p class="input-wrap__description">Ширина в метрах</p>
-                  <input class="input-wrap__input" type="number" id="width" min="0">
+                <div class="container-square">
+                  <span class="container-square__span">ИЛИ</span>
+                  <!-- <img src="./assets/images/icons/next.png" alt="далее" class="container-square__img">-->
+                  <div class="square-input-box">
+                    <p class="square-input-box__text">S (м²)</p>
+                    <input class="square-input-box__input" type="number" id="square" min="0">
+                  </div> 
+                  <!-- <img src="./assets/images/icons/next.png" alt="далее" class="container-square__img"> -->
                 </div>
-              </div>
-              <div class="container-square">
-                <img src="./assets/images/icons/next.png" alt="далее" class="container-square__img">
-                <div class="square-input-box">
-                  <p class="square-input-box__text">м²</p>
-                  <input class="square-input-box__input" type="number" id="square" min="0">
-                </div>
-                <img src="./assets/images/icons/next.png" alt="далее" class="container-square__img">
               </div>
               <div class="sum">
                 <div class="out-wrap">
@@ -116,11 +119,12 @@
                 </div>
               </div>
             </div>
+            
             <div class="price">
               <p class="price__text">Цена с комплектующими:</p><span class="price__sum" id="parts-sum">0 ₽</span>
             </div>
             <div class="price">
-              <p class="price__text">Цена с монтажем:</p><span class="price__sum" id="montage">1.220₽</span>
+              <p class="price__text">Цена с монтажем:</p><span class="price__sum" id="montage">0 ₽</span>
             </div>
           </div>
           <div class="buttons">
@@ -306,6 +310,6 @@
     </div>
   </footer>
 
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

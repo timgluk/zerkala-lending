@@ -36,72 +36,89 @@
         .inputs {
           display: flex;
           justify-content: space-between;
-          .dimensions {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .input-wrap {
-              &__description {
-                font-family: 'Lato', sans-serif;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 18px;
-                padding: 0;
-                margin: 0;
-              }
-              &__input {
-                text-align: center;
-                max-width: 135px;
-                height: 35px;
-                background: rgba(22, 193, 243, 0.02);
-                border: 1px solid rgba(0, 0, 0, 0.5);
-                border-radius: 5px;
-                font-family: 'Lato', sans-serif;
-                font-weight: 500;
-                font-size: 18px;
-                @media (max-width: 500px) {
-                  max-width: 100px;
+          .inputs-box {
+            .dimensions {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              gap: 10px;
+              padding: 10px;
+              border: 1px black dashed;
+              border-radius: 10px;
+              .input-wrap {
+                &__description {
+                  font-family: 'Lato', sans-serif;
+                  font-weight: 400;
+                  font-size: 15px;
+                  line-height: 18px;
+                  padding: 0;
+                  margin: 0;
+                }
+                &__input {
+                  text-align: center;
+                  max-width: 135px;
+                  height: 35px;
+                  background: rgba(22, 193, 243, 0.02);
+                  border: 1px solid rgba(0, 0, 0, 0.5);
+                  border-radius: 5px;
+                  font-family: 'Lato', sans-serif;
+                  font-weight: 500;
+                  font-size: 18px;
+                  @media (max-width: 500px) {
+                    max-width: 100px;
+                  }
                 }
               }
             }
-          }
-          .container-square {
-            display: flex;
-            flex-direction: row;
-            &__img {
-              object-fit: scale-down;
-              padding-top: 10px;
-            }
-            .square-input-box {
+            .container-square {
               display: flex;
               flex-direction: column;
-              justify-content: center;
-
-              &__text {
-                font-family: 'Lato', sans-serif; 
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 18px;
-                padding: 0;
-                margin: 0;
+              
+              &__img {
+                object-fit: scale-down;
+                padding-top: 10px;
               }
-              &__input {
-                text-align: center;
-                max-width: 79px;
-                height: 35px;
-                background: rgba(22, 193, 243, 0.02);
-                border: 1px solid rgba(0, 0, 0, 0.5);
-                border-radius: 5px;
-                font-family: 'Lato', sans-serif;
-                font-weight: 500;
-                font-size: 18px;
+
+              &__span {
+                padding: 10px 0 10px 10px;
+              }
+              .square-input-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px;
+                border: 1px black dashed;
+                border-radius: 10px;
+
+                &__text {
+                  font-family: 'Lato', sans-serif; 
+                  font-weight: 400;
+                  font-size: 15px;
+                  line-height: 18px;
+                  padding: 0;
+                  margin: 0;
+                }
+                &__input {
+                  text-align: center;
+                  max-width: 79px;
+                  height: 35px;
+                  background: rgba(22, 193, 243, 0.02);
+                  border: 1px solid rgba(0, 0, 0, 0.5);
+                  border-radius: 5px;
+                  font-family: 'Lato', sans-serif;
+                  font-weight: 500;
+                  font-size: 18px;
+                }
               }
             }
           }
           .sum {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            padding: 10px;
+            border: 1px black dashed;
+            border-radius: 10px;
             .out-wrap {
               &__text {
                 font-family: 'Lato', sans-serif;

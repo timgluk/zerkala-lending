@@ -15,7 +15,7 @@ button.addEventListener('click', (e) => {
   let w = +widthData?.value
   let s = +square?.value
 
-  let valueSquare = s > 0 ? s : l + w // Количество квадратных метров
+  let valueSquare = s > 0 ? s : l * w // Количество квадратных метров
 
   console.log(valueSquare)
   if (s > 0 || l * w === s) {

@@ -1,7 +1,7 @@
 .calculators {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 1360px;
+  max-width: 1200px;
   background: #FFFFFF;
   box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -11,14 +11,14 @@
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
   }
   @media (max-width: 830px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
   }
   @media (max-width: 550px) {
-    margin: 85px 5px 0 5px;
+    margin: 85px 10px 0 10px;
   }
   .calculator {
     display: flex;
@@ -26,12 +26,16 @@
     @media (max-width: 1200px) {
       grid-row: 2 / 3;
     }
+    @media (max-width: 830px) {
+      align-items: center;
+    }
     
     .calculation {
       display: flex;
       flex-direction: column;
       padding: 20px;
       height: 100%;
+      
       .calculation-box {
         .inputs {
           display: flex;
@@ -81,6 +85,9 @@
 
               &__span {
                 padding: 10px 0 10px 10px;
+                font-family: 'Lato', sans-serif; 
+                font-weight: 600;
+                font-size: 18px;
               }
               .square-input-box {
                 display: flex;
@@ -187,9 +194,26 @@
       }
       .buttons {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-between;
+        margin-top: 50px;
         height: 100%;
+        @media (max-width: 650px) {
+          flex-wrap: wrap;
+        }
+        &__calculate {
+          // display: block;
+          height: 41px;
+          border-radius: 10px;
+          border: none;
+          font-family: 'Lato', sans-serif; 
+          font-weight: 500;
+          font-size: 15px;
+          color: #FFFFFF;
+          background: linear-gradient(180deg, #535699 -37.8%, #2D32A4 150%);
+          padding: 0 20px;
+        }
         &__button {
           width: 207px;
           height: 41px;
@@ -201,7 +225,6 @@
           font-size: 15px;
           line-height: 18px;
           color: #FFFFFF;
-          margin-top: 50px;
         }
       }
     }
@@ -215,7 +238,7 @@
    
     &__title {
       font-weight: 700;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 98%;
       color: #000000;
       @media (max-width: 1200px) {
@@ -223,12 +246,12 @@
         text-align: center;
       }
       @media (max-width: 650px) {
-        font-size: 24px;
+        font-size: 20px;
       }
     }
     &__text {
       font-weight: 400;
-      font-size: 19px;
+      font-size: 16px;
       line-height: 23px;
       text-align: justify;
       color: rgba(0, 0, 0, 0.7);
@@ -243,23 +266,31 @@
   }
   .envelope {
     display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    margin: 20px;
+    justify-content: center;
+    // align-items: flex-end;
+    // justify-content: end;
+    // margin: 20px;
     padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    // border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    background: no-repeat center url('../assets/images/envelope.png');
-    background-size: cover;
+    // background: no-repeat center url('../assets/images/envelope.png');
+    // background-size: cover;
     @media (max-width: 830px) {
       grid-row: 3 / 4;
     }
-    &__price {
-      font-family: 'Lato', sans-serif; 
-      font-weight: 600;
-      font-size: 40px;
-      line-height: 48px;
-      color: #D72853;
+    &__img {
+      width: 100%;
+      object-fit: cover;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+
     }
+    // &__price {
+    //   font-family: 'Lato', sans-serif; 
+    //   font-weight: 600;
+    //   font-size: 40px;
+    //   line-height: 48px;
+    //   color: #D72853;
+    // }
   }
 }

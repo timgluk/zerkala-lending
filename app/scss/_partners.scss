@@ -6,17 +6,17 @@
   .wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 1360px;
+    max-width: 1200px;
     width: 100%;
     margin: 25px 30px 0 30px;
     box-sizing: border-box;
     &__title {
       font-family: 'Lato', sans-serif;
       font-weight: 700;
-      font-size: 45px;
-      line-height: 98%;
+      font-size: 35px;
+      // line-height: 98%;
       @media (max-width: 600px) {
-        font-size: 25px;
+        font-size: 20px;
       }
     }
     .partner-box {

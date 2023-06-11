@@ -5,25 +5,28 @@
   .wrapp {
     display: flex;
     flex-direction: column;
-    max-width: 1360px;
+    max-width: 1200px;
     width: 100%;
     margin: 25px 30px 50px 30px;
     box-sizing: border-box;
+    @media (max-width: 700px) {
+      margin: 25px 20px 50px 20px;
+    }
     .reviews__title {
       font-family: 'Lato', sans-serif;
       font-weight: 700;
-      font-size: 45px;
+      font-size: 35px;
       line-height: 98%;
       color: #000000;
       @media (max-width: 700px) {
-        font-size: 30px;
+        font-size: 25px;
       }
     }
     .review-box {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       justify-items: center;
-      column-gap: 10px;
+      column-gap: 20px;
       @media (max-width: 850px) {
         grid-template: 1fr 1fr / 1fr 1fr;
         gap: 10px 10px;
@@ -96,8 +99,8 @@
         &__text {
           font-family: 'Montserrat';
           font-weight: 400;
-          font-size: 13px;
-          line-height: 84.5%;
+          font-size: 12px;
+          line-height: 85%;
           color: rgba(83, 86, 153, 0.7);
         }
       }

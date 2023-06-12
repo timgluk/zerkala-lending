@@ -7,7 +7,7 @@ const montageOutSum = document.querySelector('#montage') // Вывод Цена 
 const squarePrice = 454.25 // Цена за квадрат Байкал и Ритейл
 const partsPrice = 242 // Цена Комплектующие кв.м
 const montagePrice = 450 // Цена за монтаж кв.м
-const button = document.querySelector('.buttons__button') // Кнопка
+const button = document.querySelector('.buttons__calculate') // Кнопка
 let sum // Сумма 
 
 button.addEventListener('click', (e) => {
@@ -41,3 +41,14 @@ button.addEventListener('click', (e) => {
     montageOutSum.textContent = `${sum + partsPrice * valueSquare + montagePrice * valueSquare} ₽`
   }
 })
+
+// dropdown
+
+const question = [...document.querySelectorAll('.question')]
+
+question.map(el => el.addEventListener('click', (e) => {
+  const answer = el.nextElementSibling
+  const arrow = el.querySelector('.question__arrow')
+  answer.classList.toggle('answer_active')
+  arrow.classList.toggle('question__arrow_active')
+}))

@@ -16,16 +16,18 @@
       // line-height: 98%;
     }
     .drop-down-box {
+      position: relative;
       background: #FFFFFF;
       box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
       margin-bottom: 30px;
-      transition: all 1s ease-out;
+      transition: all 1s ease-in-out;
       .question {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 0 20px 0 30px;
+        cursor: pointer;
         &__title {
           font-family: 'Tenor Sans', sans-serif;
           font-weight: 400;
@@ -40,12 +42,22 @@
         &__arrow {
           object-fit: contain;
           transform: rotate(180deg);
+          transition: all 0.2s ease-in-out;
+          &_active {
+            transform: rotate(0);
+          }
         }
       }
       .answer {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-90px);
+        z-index: -1;
         padding: 20px 30px;
         background: #F1F2F4;
         border-radius: 0px 0px 9px 9px;
+        transition: all 0.2s;
         &__text {
           font-family: 'Lato', sans-serif;
           font-weight: 400;
@@ -53,6 +65,13 @@
           line-height: 24px;
           color: rgba(0, 0, 0, 0.7);
           margin: 0;
+        }
+
+        &_active {
+          position: static;
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     }

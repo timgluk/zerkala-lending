@@ -4,16 +4,16 @@
   align-items: center;
   width: 100%;
   margin-top: 40px;
+  padding: 20px 0;
   background: #EDEDF6;
   box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.5);
-  // border-radius: 10px;
   .wrapp {
     position: relative;
     display: flex;
     flex-direction: column;
     max-width: 1200px;
     width: 100%;
-    margin: 25px 30px 20px 30px;
+    margin: 20px 30px;
     box-sizing: border-box;
     &__title {
       font-family: 'Lato', sans-serif;
@@ -21,6 +21,7 @@
       font-size: 35px;
       line-height: 98%;
       color: #000000;
+      margin-top: 0;
       @media (max-width: 700px) {
         font-size: 25px;
       }
@@ -46,10 +47,11 @@
         font-weight: 400;
         font-size: 20px;
         width: 100%;
-        word-break: break-all;
         padding-left: 50px;
         color: rgba(0, 0, 0, 0.7);
+        margin: 0;
         @media (max-width: 700px) {
+          margin-top: 25px;
           padding: 0;
           font-size: 16px;
         }

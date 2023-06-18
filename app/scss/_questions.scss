@@ -41,10 +41,9 @@
         }
         &__arrow {
           object-fit: contain;
-          transform: rotate(180deg);
           transition: all 0.2s ease-in-out;
           &_active {
-            transform: rotate(0);
+            transform: rotate(180deg);
           }
         }
       }

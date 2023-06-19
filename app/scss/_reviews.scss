@@ -51,11 +51,12 @@
           }
           .photo {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            // align-items: center;
+            // justify-content: center;
             width: 65px;
+            height: 60px;
             @media (max-width: 1200px) {
-              width: 65px;
+              // width: 60px;
             }
             // &__img {
             //   // width: 100%;

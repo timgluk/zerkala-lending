@@ -588,6 +588,26 @@
         <button class="reviews__button">Обратный звонок  &nbsp; ➙ &nbsp;  Консультация специалиста</button>
       </div>
     </section>
+    <div class="modal-wrapper">
+      <form class="modal" name="modal" enctype="multipart/form-data" method="post" id="form" onsubmit="submitForm(event)" action="mailer/send.php">
+        <h2 class="modal__title">Написать нам</h2>
+        <input type="text"
+               class="modal__input"
+               placeholder="Имя"
+               name="name"
+               required
+        />
+        <input type="text"
+               class="modal__input"
+               placeholder="E-mail или Телефон"
+               name="contacts"
+        />
+        <!-- <p>Прикрепить файлы</p>
+        <input type="file" name="myfile[]" multiple id="myfile"> -->
+        <div class="g-recaptcha" data-sitekey="6LfUqCAmAAAAABDDJMTjMt_BLwiTDGhxfPjP4WiH"></div>
+        <input class="sing-in_modal" type="submit" name="submit" value="Отправить" />
+      </form>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__main">
@@ -613,7 +633,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>
